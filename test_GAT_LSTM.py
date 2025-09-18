@@ -28,7 +28,7 @@ def parse_args():
     parser.add_argument(
         "--output_dir",
         type=str,
-        default="./Results/GAT_LSTM/Nonlinear_Analysis/Displacement/2022_07_11__08_19_22",
+        default="./Inference/Displacement",
     )
     parser.add_argument("--MAX_plot_num", type=int, default=40)
     args = parser.parse_args()
@@ -147,8 +147,18 @@ with torch.no_grad():
         src_seq_len = Data.time_steps[0].item()
         trg_seq_len = int(src_seq_len / 10)
 
-        if i % int(len(eval_dataset) / args.MAX_plot_num) == 0:
+
+
+        plot_idx = set(np.linspace(
+                        0, len(eval_dataset) - 1,
+                        num=min(int(getattr(args, "MAX_plot_num", 4) or 4), len(eval_dataset)),
+                        dtype=int
+                    ))
+
+
+        if i in plot_idx:
             sample_folder = os.path.join(eval_fig_dir, f"sample{i}")
+            os.makedirs(sample_folder, exist_ok=True)
             if not os.path.isdir(sample_folder):
                 os.mkdir(sample_folder)
 

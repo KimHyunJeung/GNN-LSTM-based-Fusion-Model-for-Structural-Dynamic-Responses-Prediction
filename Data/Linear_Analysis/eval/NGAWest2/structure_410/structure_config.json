@@ -1,0 +1,18 @@
+{
+    "x_num_of_grids": 5,
+    "y_num_of_grids": 5,
+    "z_num_of_grids": 3,
+    "x_grid_space": 6000,
+    "y_grid_space": 3200,
+    "z_grid_space": 7000,
+    "1F_col_length": 4200,
+    "storys": 5,
+    "number_of_nodes": 144,
+    "analysis_type": "linear",
+    "selection_type": "multiple",
+    "first_period": 0.76768,
+    "original_time_steps": 12000,
+    "padded_time_steps": 12000,
+    "sample_rate": 0.005,
+    "ground_motion_name": "Parkfield-02_CA_4146_FN"
+}

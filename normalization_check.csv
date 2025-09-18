@@ -1,0 +1,14 @@
+feature_block,before_max_abs,after_max_abs,is_normalized(~=1)
+"edge_attr[:,2]_Sy",499.75604248046875,1.0,True
+"edge_attr[:,3]_Sz",198.83212280273438,1.0,True
+"edge_attr[:,4]_area",0.045644111931324005,1.0,True
+"edge_attr[:,5]_elen",11.4651517868042,1.0,True
+ground_motion,5.9771928787231445,1.0,True
+"x[:,12:15]_modeShape",0.7996870875358582,1.0,True
+"x[:,3:6]_grid_index",4.9383955001831055,1.0,True
+"x[:,6]_period",2.4840502738952637,1.0,True
+"x[:,7]_DOF",6.0,1.0,True
+"x[:,8]_mass",1408.307373046875,1.0,True
+"x[:,9:12]_inertia",49056.26953125,1.0,True
+"x[:,:3]_gridline_num",65.78874969482422,1.0,True
+y,196.69143676757812,1.0,True

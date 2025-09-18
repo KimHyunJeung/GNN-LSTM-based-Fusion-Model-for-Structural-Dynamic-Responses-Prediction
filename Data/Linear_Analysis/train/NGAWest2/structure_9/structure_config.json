@@ -1,0 +1,18 @@
+{
+    "x_num_of_grids": 6,
+    "y_num_of_grids": 4,
+    "z_num_of_grids": 2,
+    "x_grid_space": 7000,
+    "y_grid_space": 3200,
+    "z_grid_space": 8000,
+    "1F_col_length": 4200,
+    "storys": 4,
+    "number_of_nodes": 105,
+    "analysis_type": "linear",
+    "selection_type": "multiple",
+    "first_period": 0.72006,
+    "original_time_steps": 17277,
+    "padded_time_steps": 17400,
+    "sample_rate": 0.005,
+    "ground_motion_name": "Imperial_Valley-06_191_FP"
+}

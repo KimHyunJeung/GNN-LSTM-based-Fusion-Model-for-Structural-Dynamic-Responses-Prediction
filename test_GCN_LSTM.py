@@ -24,7 +24,7 @@ def parse_args():
     parser.add_argument(
         "--output_dir",
         type=str,
-        default="./Results/GCN_LSTM/Nonlinear_Analysis/Acceleration/2022_09_09__18_27_46",
+        default="./Results/GCN_LSTM/Nonlinear_Analysis/Displacement/2025_09_10__19_48_45",
     )
     parser.add_argument("--MAX_plot_num", type=int, default=4)
     args = parser.parse_args()

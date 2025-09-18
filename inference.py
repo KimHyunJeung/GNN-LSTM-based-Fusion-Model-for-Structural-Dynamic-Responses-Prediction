@@ -23,6 +23,7 @@ from Utils.utils import (
 from Models.GAT_LSTM import GAT_LSTM, LSTM, GAT_Encoder
 from inference_arg import parse_args
 
+
 # * Basic Settings
 # args
 args = parse_args()

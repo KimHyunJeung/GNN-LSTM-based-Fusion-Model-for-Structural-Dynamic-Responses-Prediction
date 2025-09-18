@@ -33,10 +33,10 @@ def parse_args():
     parser.add_argument("--output_dir", type=str, default="./Results")
     parser.add_argument("--response_type", type=str, default="Displacement")
     parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--epoch", type=int, default=100)
+    parser.add_argument("--epoch", type=int, default=4000)
     parser.add_argument("--batch_size", type=int, default=5)
     parser.add_argument("--eval_interval", type=int, default=5)
-    parser.add_argument("--plot_num", type=int, default=1)
+    parser.add_argument("--plot_num", type=int, default=10)
     parser.add_argument("--plot", action="store_true")
     # model hyperparamter
     parser.add_argument("--compression_rate", type=int, default=40)
@@ -50,10 +50,5 @@ def parse_args():
     parser.add_argument("--sch_factor", type=float, default=0.75)
     parser.add_argument("--patience", type=int, default=40)
     parser.add_argument("--pack_mode", action="store_true")
-    args = parser.parse_args(
-        args=[
-            "--pack_mode",
-            # "--plot"
-        ]
-    )
+    args = parser.parse_args()
     return args

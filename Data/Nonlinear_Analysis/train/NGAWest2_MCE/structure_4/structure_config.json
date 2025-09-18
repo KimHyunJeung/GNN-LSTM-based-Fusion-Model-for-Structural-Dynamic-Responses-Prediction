@@ -1,0 +1,18 @@
+{
+    "x_num_of_grids": 4,
+    "y_num_of_grids": 5,
+    "z_num_of_grids": 5,
+    "x_grid_space": 8000,
+    "y_grid_space": 3200,
+    "z_grid_space": 7000,
+    "1F_col_length": 4200,
+    "storys": 5,
+    "number_of_nodes": 180,
+    "analysis_type": "nonlinear",
+    "selection_type": "multiple",
+    "first_period": 0.85107,
+    "original_time_steps": 18419,
+    "padded_time_steps": 18600,
+    "sample_rate": 0.005,
+    "ground_motion_name": "Denali_Alaska_2114_FN"
+}

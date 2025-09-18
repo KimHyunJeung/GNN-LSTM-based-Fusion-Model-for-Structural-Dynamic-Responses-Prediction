@@ -98,6 +98,28 @@ torch.save(
     normalized_item_dict, os.path.join(args.output_dir, "normalized_item_dict.pth")
 )
 
+
+logger.info(f"\n\n** Input Data Dimensions **")
+logger.info(f"{'=' * 100}")
+sample_data = train_dataset[0]
+logger.info(f"Node Features Shape: {sample_data.x.shape}")
+logger.info(f"Edge Features Shape: {sample_data.edge_attr.shape}")  
+logger.info(f"Edge Index Shape: {sample_data.edge_index.shape}")
+logger.info(f"Ground Motion Shape: {sample_data.ground_motion.shape}")
+logger.info(f"Target Response Shape: {sample_data.y.shape}")
+logger.info(f"Graph Structure: {sample_data.x.shape[0]} nodes, {sample_data.edge_index.shape[1]} edges")
+logger.info(f"GCN Input Features: {sample_data.x.shape[-1]} dimensions")
+# LSTM 입력 차원은 GCN 출력 + Ground Motion 압축된 특성으로 계산
+gnn_embed_dim = args.gnn_embed_dim  # GCN 출력 차원
+ground_motion_compressed = sample_data.ground_motion.shape[0] // args.compression_rate
+lstm_input_dim = gnn_embed_dim + ground_motion_compressed
+logger.info(f"LSTM Input Features: {lstm_input_dim} dimensions (GNN: {gnn_embed_dim} + Ground Motion: {ground_motion_compressed})")
+logger.info(f"Compression Rate: {args.compression_rate}")
+logger.info(f"{'=' * 100}")
+
+
+
+
 # Normalize train data
 train_dataset.normalize_source(normalized_item_dict)
 train_dataset.normalize_target(normalized_item_dict)

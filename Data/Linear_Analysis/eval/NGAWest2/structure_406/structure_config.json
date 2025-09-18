@@ -1,0 +1,18 @@
+{
+    "x_num_of_grids": 3,
+    "y_num_of_grids": 7,
+    "z_num_of_grids": 2,
+    "x_grid_space": 7000,
+    "y_grid_space": 3200,
+    "z_grid_space": 6000,
+    "1F_col_length": 4200,
+    "storys": 7,
+    "number_of_nodes": 96,
+    "analysis_type": "linear",
+    "selection_type": "multiple",
+    "first_period": 0.98675,
+    "original_time_steps": 30001,
+    "padded_time_steps": 30200,
+    "sample_rate": 0.005,
+    "ground_motion_name": "Tottori_Japan_3947_FP"
+}

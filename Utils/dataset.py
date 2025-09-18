@@ -44,7 +44,14 @@ class GraphDataset(Dataset):
             )
             print(f"Loading data from {folder_path}")
             for i in tqdm(range(numOfData)):
-                graph = torch.load(os.path.join(folder_path, data_list[i], graph_name))
+                # 안전: 필요하면 CPU로 읽고, 실패 시 fallback
+                path = os.path.join(folder_path, data_list[i], graph_name)
+                try:
+                    graph = torch.load(path, map_location="cpu")  # 기본 시도(2.6+에선 weights_only=True)
+                except Exception:
+                    # 신뢰 가능한 체크포인트만 허용!
+                    graph = torch.load(path, map_location="cpu", weights_only=False)
+
 
                 # discord the data which's sample_rate != unified_sample_rate:
                 if graph.sample_rate != self.unified_sample_rate:

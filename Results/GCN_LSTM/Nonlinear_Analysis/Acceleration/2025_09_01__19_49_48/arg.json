@@ -1,0 +1,37 @@
+{
+    "analysis_type": "Nonlinear_Analysis",
+    "train_dataset_dir_list": [
+        "./Data/Nonlinear_Analysis/train/ChiChi_DBE",
+        "./Data/Nonlinear_Analysis/train/NGAWest2_DBE",
+        "./Data/Nonlinear_Analysis/train/ChiChi_MCE",
+        "./Data/Nonlinear_Analysis/train/NGAWest2_MCE"
+    ],
+    "eval_dataset_dir_list": [
+        "./Data/Nonlinear_Analysis/eval/ChiChi_DBE",
+        "./Data/Nonlinear_Analysis/eval/NGAWest2_DBE",
+        "./Data/Nonlinear_Analysis/eval/ChiChi_MCE",
+        "./Data/Nonlinear_Analysis/eval/NGAWest2_MCE"
+    ],
+    "max_train_dataset_samples": null,
+    "max_eval_dataset_samples": null,
+    "max_train_plot_samples": 1,
+    "max_eval_plot_samples": 1,
+    "output_dir": "./Results/GCN_LSTM\\Nonlinear_Analysis\\Acceleration\\2025_09_01__19_49_48",
+    "response_type": "Acceleration",
+    "seed": 42,
+    "epoch": 1000,
+    "batch_size": 5,
+    "eval_interval": 5,
+    "plot_num": 1,
+    "plot": false,
+    "compression_rate": 40,
+    "hid_dim": 128,
+    "gnn_embed_dim": 128,
+    "dropout": 0.2,
+    "n_layers": 2,
+    "max_story": 8,
+    "lr": 0.002,
+    "sch_factor": 0.75,
+    "patience": 40,
+    "pack_mode": true
+}

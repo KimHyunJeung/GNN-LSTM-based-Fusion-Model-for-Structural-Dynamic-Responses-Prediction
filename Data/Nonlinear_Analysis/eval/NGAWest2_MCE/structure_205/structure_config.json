@@ -1,0 +1,18 @@
+{
+    "x_num_of_grids": 4,
+    "y_num_of_grids": 4,
+    "z_num_of_grids": 4,
+    "x_grid_space": 7000,
+    "y_grid_space": 3200,
+    "z_grid_space": 7000,
+    "1F_col_length": 4200,
+    "storys": 4,
+    "number_of_nodes": 125,
+    "analysis_type": "nonlinear",
+    "selection_type": "multiple",
+    "first_period": 0.59701,
+    "original_time_steps": 30001,
+    "padded_time_steps": 30200,
+    "sample_rate": 0.005,
+    "ground_motion_name": "El_Mayor-Cucapah_6005_FN"
+}
